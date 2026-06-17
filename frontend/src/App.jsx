@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
+import Home from './Home';
 import Menu from './Menu'; //Think of the menu page as an imported component
-import Review from './Review';
 import Reservations from './Reservations';
 
 function App() {
-   const [page, setPage] = useState("menu");//Sets current page to menu 
+   const [page, setPage] = useState("home");//Sets current page to menu 
     return (   
     
     <div className="container">
@@ -19,8 +19,8 @@ function App() {
             </button>
             
             <button className="btn btn-primary"
-            onClick={() => setPage("review")}>
-                Reviews
+            onClick={() => setPage("home")}>
+                Home
             </button>
            
             <button className="btn btn-primary"
@@ -32,7 +32,7 @@ function App() {
         <hr />
 
         {page === "menu" && <Menu />}
-        {page === "review" && <Review />}
+        {page === "home" && <Home />}
         {page === "reservations" && <Reservations />}
     </div>
 
