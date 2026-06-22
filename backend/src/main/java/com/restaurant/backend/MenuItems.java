@@ -1,8 +1,9 @@
+package com.restaurant.backend;
 import jakarta.persistence.*;// we need this import for @Entity, @Table and more
 
 @Entity//tells spring that this is a database
 @Table(name = "menu_items")
-public class MenuItem {//this maps the table to java
+public class MenuItems {//this maps the table to java
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +13,10 @@ public class MenuItem {//this maps the table to java
     private String description;
     private double price;
 
-    public MenuItem() {// We need to make an empty constructor 
+    public MenuItems() {// We need to make an empty constructor 
     }
 
-    public MenuItem(String n, String d, double p) {
+    public MenuItems(String n, String d, double p) {
         name = n;
         description = d;
         price = p;
