@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Menu() {
+function AdminMenu() {
   const [menuItems, setMenuItems] = useState([]);
     useEffect(() => {
 
@@ -11,7 +11,7 @@ function Menu() {
   
   return (
     <div>
-      <h4>Lunch Menu</h4>
+      <h4>Admin Lunch Menu</h4>
       
       <div>
        {menuItems.map(item => (
@@ -24,8 +24,10 @@ function Menu() {
           </div>
         ))}
       </div>
+       <input type="text" 
+       className="form-control"/>
     </div>
   );
 }
 
-export default Menu;
+export default AdminMenu;
