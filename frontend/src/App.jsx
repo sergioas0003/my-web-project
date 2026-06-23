@@ -9,7 +9,7 @@ function App() {
     return (   
     
     <div className="container">
-        <div className="d-flex gap-2 p-3 bg-light border rounded">{/* This creates the navbar */}
+        <div className="d-flex gap-2 p-2 #f5f0e1">{/* This creates the navbar */}
             
             <button 
             className="btn btn-primary" //Color of button blue
@@ -38,6 +38,5 @@ function App() {
 
   );
 }
-
 
 export default App;
