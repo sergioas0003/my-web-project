@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Home from './Home';
 import Menu from './Menu'; //Think of the menu page as an imported component
 import Reservations from './Reservations';
-import AdminMenu from './AdminMenu'; 
+import AddMenuItem from './AddMenuItem'; 
 
 function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
@@ -30,8 +30,8 @@ function App() {
             </button>
 
             <button className="btn btn-primary"
-            onClick={() => setPage("admin menu")}>
-                Admin Menu
+            onClick={() => setPage("add menu item")}>
+                Add Menu Item
             </button>
         </div>
 
@@ -40,7 +40,7 @@ function App() {
         {page === "menu" && <Menu />}
         {page === "home" && <Home />}
         {page === "reservations" && <Reservations />}
-        {page === "admin menu" && <AdminMenu />}
+        {page === "add menu item" && <AddMenuItem />}
     </div>
 
   );
