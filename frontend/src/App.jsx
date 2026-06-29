@@ -4,6 +4,7 @@ import Home from './Home';
 import Menu from './Menu'; //Think of the menu page as an imported component
 import Reservations from './Reservations';
 import AddMenuItem from './AddMenuItem'; 
+import DeleteMenuItem from './DeleteMenuItem'; 
 
 function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
@@ -33,6 +34,11 @@ function App() {
             onClick={() => setPage("add menu item")}>
                 Add Menu Item
             </button>
+
+            <button className="btn btn-primary"
+            onClick={() => setPage("delete menu item")}>
+                Delete Menu Item
+            </button>
         </div>
 
         <hr />
@@ -41,6 +47,7 @@ function App() {
         {page === "home" && <Home />}
         {page === "reservations" && <Reservations />}
         {page === "add menu item" && <AddMenuItem />}
+        {page === "delete menu item" && <DeleteMenuItem />}
     </div>
 
   );

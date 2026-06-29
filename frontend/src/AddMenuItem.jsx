@@ -6,11 +6,6 @@ function AddMenuItem() {
   const [price, setPrice] = useState("");
 
   function AddItem(){//Create new Menu Item button function
-    console.log({
-    name,
-    description,
-    price
-}); 
     fetch("http://localhost:8080/api/menu", {
         method: "POST",
         headers: {

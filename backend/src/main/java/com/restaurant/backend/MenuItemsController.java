@@ -20,6 +20,12 @@ public class MenuItemsController {
 
     @GetMapping
     public List<MenuItems> getAllMenuItems() {
-        return repository.findAll();
+        return repository.findAll();//retrieves data
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteItem(@PathVariable Integer id) {
+        repository.deleteById(id);//deletes row in tbl that matches id
+        
     }
 }
