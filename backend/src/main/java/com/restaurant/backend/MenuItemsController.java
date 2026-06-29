@@ -13,6 +13,11 @@ public class MenuItemsController {
         repository = r;
     }
 
+    @PostMapping
+    public MenuItems AddItem(@RequestBody MenuItems item){
+       return repository.save(item);//equivalent to INSERT in SQL
+    }
+
     @GetMapping
     public List<MenuItems> getAllMenuItems() {
         return repository.findAll();

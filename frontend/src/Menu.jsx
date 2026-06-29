@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
+
     useEffect(() => {
 
         fetch("http://localhost:8080/api/menu") // retrieves data from menu
