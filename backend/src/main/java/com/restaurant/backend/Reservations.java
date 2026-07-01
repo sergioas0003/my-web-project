@@ -4,7 +4,7 @@ import java.time.LocalDate;// we need this for the reservation date
 
 @Entity//tells spring that this is a database
 @Table(name = "reservations")
-public class Reservation {//this maps the table to java
+public class Reservations {//this maps the table to java
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +15,10 @@ public class Reservation {//this maps the table to java
     private int partySize;
     private LocalDate date;
 
-    public Reservation() {// We need to make an empty constructor 
+    public Reservations() {// We need to make an empty constructor 
     }
 
-    public Reservation(String e, String t, int p, String d) {
+    public Reservations(String e, String t, int p, LocalDate d) {
         email = e;
         time = t;
         partySize = p;
@@ -48,7 +48,7 @@ public class Reservation {//this maps the table to java
         time = t;
     }
 
-    public String getPartySize() {
+    public int getPartySize() {
         return partySize;
     }
 

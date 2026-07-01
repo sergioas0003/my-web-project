@@ -14,12 +14,12 @@ public class ReservationController {
     }
 
     @PostMapping
-    public MenuItems AddReservation(@RequestBody Reservation item){
+    public Reservations AddReservation(@RequestBody Reservations item){
        return repository.save(item);//equivalent to INSERT in SQL
     }
 
     @GetMapping
-    public List<Reservation> getAllReservations() {
+    public List<Reservations> getAllReservations() {
         return repository.findAll();//retrieves data
     }
 

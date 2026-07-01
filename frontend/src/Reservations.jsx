@@ -4,10 +4,23 @@ function Reservations() {
 const [email, setEmail] = useState("");
 const [date, setDate] = useState("");
 const [partySize, setPartySize] = useState("");
-const [timeSlot, setTimeSlot] = useState("");
+const [time, setTime] = useState("");
 
   function AddReservation(){
-    console.log(email + " " + date + " " + partySize + " " + timeSlot);
+    console.log(email + " " + date + " " + partySize + " " + time);
+
+    fetch("http://localhost:8080/api/reservations", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email: email,
+            date: date,
+            partySize: partySize,
+            time: time
+        })
+    });
   }
 
   return (
@@ -42,14 +55,16 @@ const [timeSlot, setTimeSlot] = useState("");
 
         <select
             className="form-select"
-            value={timeSlot}
-            onChange={(e) => setTimeSlot(e.target.value)}
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
         >
             <option value="">Select time</option>
             <option value="12">12:00</option>
-            <option value="1pm">13:00</option>
-            <option value="2pm">14:00</option>
-            <option value="3pm">15:00</option>
+            <option value="1">13:00</option>
+            <option value="2">14:00</option>
+            <option value="3">15:00</option>
+            <option value="4">16:00</option>
+            <option value="5">17:00</option>
         </select>
       </div>
 
