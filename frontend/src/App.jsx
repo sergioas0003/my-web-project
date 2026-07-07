@@ -12,7 +12,7 @@ function App() {
     return (   
     
     <div className="container">
-        <div className="d-flex gap-2 p-2 #f5f0e1">{/* This creates the navbar */}
+        <div className="navbar">{/* This creates the navbar */}
             
             <button 
             className="button" //Color of button blue
