@@ -4,7 +4,7 @@ function DeleteMenuItem() {
   const [menuItems, setMenuItems] = useState([]);
 
   async function DeleteItem(id){//async, loadMenuItems and await allows for instant update on menu deletion
-    await fetch("http://localhost:8080/api/menu/" + id, {// if "" is used, the id paraamter does not convert
+    await fetch("http://localhost:8080/api/reservations/" + id, {// if "" is used, the id paraamter does not convert
       method: "DELETE"
     });
     loadMenuItems();

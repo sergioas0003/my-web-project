@@ -11,6 +11,7 @@ public class Reservations {//this maps the table to java
     
     private int id;// encapsulation requires variables to be made private 
     private String email;
+    private String name;
     private String time;
     private int partySize;
     private LocalDate date;
@@ -18,7 +19,8 @@ public class Reservations {//this maps the table to java
     public Reservations() {// We need to make an empty constructor 
     }
 
-    public Reservations(String e, String t, int p, LocalDate d) {
+    public Reservations(String n, String e, String t, int p, LocalDate d) {
+        name = n;
         email = e;
         time = t;
         partySize = p;
@@ -38,6 +40,14 @@ public class Reservations {//this maps the table to java
 
     public void setEmail(String e) {
         email = e;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String n) {
+        name = n;
     }
 
     public String getTime() {
