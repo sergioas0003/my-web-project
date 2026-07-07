@@ -1,6 +1,6 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #f5f3f7;
+  --text-h: #e5e2ee;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -50,10 +50,26 @@
   }
 }
 
-body {
-  background-color: #f5f0e1;
+body { 
   margin: 0;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("./assets/Backround.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
+
+.form-control {
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+    border: none;
+}
+
 
 #root {
   width: 1126px;

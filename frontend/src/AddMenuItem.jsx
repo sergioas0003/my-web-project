@@ -4,8 +4,10 @@ function AddMenuItem() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
+  const [message, setMessage] = useState("");
 
   function AddItem(){//Create new Menu Item button function
+    setMessage("You have added " + name + " ( " + description + " ) costing €" + price + " to the menu." );
     fetch("http://localhost:8080/api/menu", {
         method: "POST",
         headers: {
