@@ -7,8 +7,6 @@ const [message, setMessage] = useState("");
 const [msgColor, setMsgColor] = useState("");
 
 function Submit(){
-  console.log(username + " " + password);
-
   if(username == "a" && password == "b"){
       setMessage("Login successful!");
       setMsgColor("green");
