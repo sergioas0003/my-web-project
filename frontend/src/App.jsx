@@ -15,36 +15,37 @@ function App() {
         <div className="d-flex gap-2 p-2 #f5f0e1">{/* This creates the navbar */}
             
             <button 
-            className="btn btn-dark" //Color of button blue
+            className="button" //Color of button blue
             onClick={() => setPage("menu")}//Sets the current page to menu
             >
                 Menu {/* Button text */}
             </button>
             
-            <button className="btn btn-dark"
+            <button className="button"
             onClick={() => setPage("home")}>
                 Home
             </button>
            
-            <button className="btn btn-dark"
+            <button className="button"
             onClick={() => setPage("reservations")}>
                 Make a Reservation
             </button>
 
-            <button className="btn btn-primary"
+            <button className="button"
+            onClick={() => setPage("login")}>
+                Login
+            </button>
+
+            <button className="admin-btn"
             onClick={() => setPage("add menu item")}>
                 Add Menu Item
             </button>
 
-            <button className="btn btn-primary"
+            <button className="admin-btn"
             onClick={() => setPage("delete menu item")}>
                 Delete Menu Item
             </button>
 
-            <button className="btn btn-primary"
-            onClick={() => setPage("login")}>
-                Login
-            </button>
         </div>
 
         <hr />

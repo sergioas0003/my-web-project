@@ -30,7 +30,7 @@ function DeleteMenuItem() {
               <p className="d-flex justify-content-between fw-bold">
                 <span>{item.name}</span>
                 <span>
-                  <button className="btn btn-danger"
+                  <button className="button"
                   onClick={() => DeleteItem(item.id)}>
                     Delete
                   </button>

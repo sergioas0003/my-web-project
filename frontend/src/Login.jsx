@@ -37,7 +37,7 @@ function Submit(){
            onChange={(e) => setPassword(e.target.value)}/>
       </div>
 
-      <button className="btn btn-dark"
+      <button className="submit-btn"
             onClick={() => Submit()}>
               Login
       </button>

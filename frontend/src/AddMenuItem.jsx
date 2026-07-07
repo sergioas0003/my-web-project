@@ -47,7 +47,7 @@ function AddMenuItem() {
            onChange={(e) => setDescription(e.target.value)}/>
       </div>
 
-      <button className="btn btn-dark"
+      <button className="submit-btn"
             onClick={() => AddItem()}>
               Add to Menu
       </button>

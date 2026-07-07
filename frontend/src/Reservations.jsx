@@ -88,7 +88,7 @@ const [message, setMessage] = useState("");
         </select>
       </div>
 
-      <button className="btn btn-dark"
+      <button className="submit-btn"
             onClick={() => AddReservation()}>
               Book Reservation
       </button>
