@@ -22,7 +22,7 @@ function DeleteMenuItem() {
 
   return (
     <div>
-      <h4>Delete Menu Item</h4>
+      <h1>Delete Menu Item</h1>
       
       <div>
        {menuItems.map(item => (

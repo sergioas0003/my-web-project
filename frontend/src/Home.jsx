@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div>
-      <h4>Home Screen</h4>
+      <h1>Papas Pizza</h1>
       <p>The food was nice 7/10.</p>
     </div>
   );

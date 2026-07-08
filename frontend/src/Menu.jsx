@@ -12,7 +12,7 @@ function Menu() {
   
   return (
     <div>
-      <h4>Lunch Menu</h4>
+      <h1>Lunch Menu</h1>
       
       <div>
        {menuItems.map(item => (

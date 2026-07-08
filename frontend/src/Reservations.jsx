@@ -27,28 +27,28 @@ const [message, setMessage] = useState("");
 
   return (
     <div>
-      <h4>Reservations</h4>
+      <h1>Reservations</h1>
       
       <h4 style={{ color: "green" }}>
         {message}
       </h4>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Reservation Name</label>
+        <label className="d-flex justify-content-between">Reservation Name</label>
           <input type="text" className="form-control" 
            value={name}
            onChange={(e) => setName(e.target.value)}/>
       </div>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Email</label>
+        <label className="d-flex justify-content-between">Email</label>
           <input type="text" className="form-control" 
            value={email}
            onChange={(e) => setEmail(e.target.value)}/>
       </div>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Party Size</label>
+        <label className="d-flex justify-content-between">Party Size</label>
 
         <select
             className="form-select"
@@ -64,14 +64,14 @@ const [message, setMessage] = useState("");
       </div>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Reservation Date</label>
+        <label className="d-flex justify-content-between">Reservation Date</label>
         <input type="date" className="form-control"
          value={date}
          onChange={(e) => setDate(e.target.value)}/>
       </div>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Reservation Time</label>
+        <label className="d-flex justify-content-between">Reservation Time</label>
 
         <select
             className="form-select"
@@ -88,7 +88,7 @@ const [message, setMessage] = useState("");
         </select>
       </div>
 
-      <button className="submit-btn"
+      <button className="submit-btn mt-3"
             onClick={() => AddReservation()}>
               Book Reservation
       </button>

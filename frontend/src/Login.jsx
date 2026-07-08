@@ -18,10 +18,11 @@ function Submit(){
 
   return (
     <div>
+      <h1>Admin Login.</h1>
       <h>Enter your username and password below.</h>
-      <h4 style={{ color: msgColor }}>
+      <h1 style={{ color: msgColor }}>
         {message}
-      </h4>
+      </h1>
     
       <div className="mb-3">
         <label className="d-flex justify-content-between fw-bold">Username</label>
@@ -37,7 +38,7 @@ function Submit(){
            onChange={(e) => setPassword(e.target.value)}/>
       </div>
 
-      <button className="submit-btn"
+      <button className="submit-btn mt-3"
             onClick={() => Submit()}>
               Login
       </button>

@@ -11,7 +11,7 @@ function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
     return (   
     
-    <div className="container">
+    <div className="app-container">
         <div className="navbar">{/* This creates the navbar */}
             
             <button 
