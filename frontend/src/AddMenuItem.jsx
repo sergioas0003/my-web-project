@@ -23,7 +23,7 @@ function AddMenuItem() {
 
   return (
     <div>
-      <h1><b>Add New Item to Menu</b></h1>
+      <h1>Add New Item to Menu</h1>
       <p>Fill in the new menu item name, description and price in the relevant space below and press submit</p>
       
       <div className="mb-3">

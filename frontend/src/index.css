@@ -40,6 +40,7 @@ button:active { /*Shrinking button when clicked tells user that thye have select
 }
 
 .admin-btn {
+  transition: 0.3s; 
   background-color: #2c3e50;    
 }
 .admin-btn:hover {
@@ -63,6 +64,7 @@ button:active { /*Shrinking button when clicked tells user that thye have select
 
 .submit-btn {
     background-color: #27ae60;
+    transition: 0.3s; 
 }
 .submit-btn:hover {
     background-color: #52be80;
@@ -74,7 +76,7 @@ button:active { /*Shrinking button when clicked tells user that thye have select
 }
  
 .app-container { /*Dark glass container*/ 
-  max-width: 1100px; 
+  max-width: 70%;
   margin: 30px auto;
   padding: 30px; 
   background: rgba(0, 0, 0, 0.65); 
@@ -83,9 +85,16 @@ button:active { /*Shrinking button when clicked tells user that thye have select
   box-shadow: 0 8px 30px rgba(0,0,0,0.4); 
 }
 
- #root {/*the main container*/
+.clear-container { /*clear container*/ 
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+#root {/*the main container*/
   width: 1126px;
-  max-width: 50%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   min-height: 100svh;

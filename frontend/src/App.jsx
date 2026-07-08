@@ -11,7 +11,7 @@ function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
     return (   
     
-    <div className="app-container">
+    <div className="clear-container">
         <div className="navbar">{/* This creates the navbar */}
             
             <button 
@@ -32,6 +32,11 @@ function App() {
             </button>
 
             <button className="button"
+            onClick={() => setPage("reservations")}>
+                Check Reservation
+            </button>
+
+            <button className="button"
             onClick={() => setPage("login")}>
                 Login
             </button>
@@ -46,9 +51,14 @@ function App() {
                 Delete Menu Item
             </button>
 
+             <button className="admin-btn"
+            onClick={() => setPage("add menu item")}>
+                Edit Reservation
+            </button>
+
         </div>
 
-        
+      <div className="app-container">
 
         {page === "menu" && <Menu />}
         {page === "home" && <Home />}
@@ -56,6 +66,8 @@ function App() {
         {page === "add menu item" && <AddMenuItem />}
         {page === "delete menu item" && <DeleteMenuItem />}
         {page === "login" && <Login />}
+
+        </div>   
         
     </div>
 
