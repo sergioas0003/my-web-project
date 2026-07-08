@@ -48,7 +48,7 @@ function App() {
 
         </div>
 
-        <hr />
+        
 
         {page === "menu" && <Menu />}
         {page === "home" && <Home />}
@@ -56,6 +56,7 @@ function App() {
         {page === "add menu item" && <AddMenuItem />}
         {page === "delete menu item" && <DeleteMenuItem />}
         {page === "login" && <Login />}
+        
     </div>
 
   );
