@@ -25,14 +25,14 @@ function Submit(){
       </h1>
     
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Username</label>
+        <label className="d-flex justify-content-between">Username</label>
           <input type="text" className="form-control" 
            value={username}
            onChange={(e) => setUsername(e.target.value)}/>
       </div>
 
       <div className="mb-3">
-        <label className="d-flex justify-content-between fw-bold">Password</label>
+        <label className="d-flex justify-content-between">Password</label>
           <input type="text" className="form-control" 
            value={password}
            onChange={(e) => setPassword(e.target.value)}/>

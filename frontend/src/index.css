@@ -3,8 +3,8 @@ body {
   min-height: 100vh;
   
   background:
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("./assets/Backround.jpg");
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), /*dims image for text legibility*/
+    url("./assets/Backround.jpg"); /*This is the backround image*/
 
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@ body {
   color: white;
 }
 
-.form-control {
+.form-control {/*This is bars for user input text*/
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -35,7 +35,7 @@ button:hover {
   transform: scale(1.05);
   transform: translateY(-3px);
 }
-button:active {
+button:active { /*Shrinking button when clicked tells user that thye have selected button*/
   transform: scale(0.98);
 }
 
@@ -51,7 +51,7 @@ button:active {
     transform: scale(0.98);
 }
 
-.navbar{
+.navbar{ /*This is the navbar at top of screen*/
     display: flex;
     align-items: center;
     padding: 15px 25px;
@@ -73,17 +73,17 @@ button:active {
     transform: scale(0.98);
 }
  
-.app-container { 
+.app-container { /*Dark glass container*/ 
   max-width: 1100px; 
   margin: 30px auto;
-   padding: 30px; 
-   background: rgba(0, 0, 0, 0.65); 
-   border-radius: 20px;
+  padding: 30px; 
+  background: rgba(0, 0, 0, 0.65); 
+  border-radius: 20px;
   backdrop-filter: blur(6px); 
   box-shadow: 0 8px 30px rgba(0,0,0,0.4); 
 }
 
- #root {
+ #root {/*the main container*/
   width: 1126px;
   max-width: 50%;
   margin: 0 auto;
@@ -93,7 +93,8 @@ button:active {
   flex-direction: column;
   box-sizing: border-box;
 }
-h1 {
+
+h1 { /*Heading text*/
     font-family: "Playfair Display", serif;
     font-size: 3rem;
     color: #ffffff;
@@ -103,8 +104,8 @@ h1 {
     text-shadow: 2px 2px 6px rgba(0,0,0,.6);
 }
 
-p {
+p {/*This is for paragraph text*/
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-size: 21px;
 }

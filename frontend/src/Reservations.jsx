@@ -27,7 +27,7 @@ const [message, setMessage] = useState("");
 
   return (
     <div>
-      <h1>Reservations</h1>
+      <h1>Make a Reservation</h1>
       
       <h4 style={{ color: "green" }}>
         {message}
