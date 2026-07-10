@@ -39,6 +39,7 @@ function DeleteMenuItem() {
               <p className="d-flex fst-italic mb-3"> 
                 {item.description}
               </p>
+              <hr />
           </div>
         ))}
       </div>

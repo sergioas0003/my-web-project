@@ -9,7 +9,7 @@ const [time, setTime] = useState("");
 const [message, setMessage] = useState("");
 
   function AddReservation(){
-    setMessage(name + ", your reservation for " + partySize + " has been successfully booked at " + time + " on " + date);
+    setMessage(name + ", your reservation for " + partySize + " has been successfully booked at " + time + "pm on " + date);
     fetch("http://localhost:8080/api/reservations", {
         method: "POST",
         headers: {
@@ -29,9 +29,9 @@ const [message, setMessage] = useState("");
     <div>
       <h1>Make a Reservation</h1>
       
-      <h4 style={{ color: "green" }}>
+      <p style={{ color: "green" }}>
         {message}
-      </h4>
+      </p>
 
       <div className="mb-3">
         <label className="d-flex justify-content-between">Reservation Name</label>

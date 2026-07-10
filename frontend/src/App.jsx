@@ -6,6 +6,7 @@ import Reservations from './Reservations';
 import AddMenuItem from './AddMenuItem'; 
 import DeleteMenuItem from './DeleteMenuItem'; 
 import Login from './Login'; 
+import CheckReservation from './CheckReservation'; 
 
 function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
@@ -32,7 +33,7 @@ function App() {
             </button>
 
             <button className="button"
-            onClick={() => setPage("reservations")}>
+            onClick={() => setPage("check reservation")}>
                 Check Reservation
             </button>
 
@@ -66,6 +67,7 @@ function App() {
         {page === "add menu item" && <AddMenuItem />}
         {page === "delete menu item" && <DeleteMenuItem />}
         {page === "login" && <Login />}
+        {page === "check reservation" && <CheckReservation />}
 
         </div>   
         

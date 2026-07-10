@@ -19,7 +19,7 @@ function Submit(){
   return (
     <div>
       <h1>Admin Login.</h1>
-      <h>Enter your username and password below.</h>
+      <p>Enter your username and password below.</p>
       <h1 style={{ color: msgColor }}>
         {message}
       </h1>

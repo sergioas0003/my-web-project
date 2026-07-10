@@ -1,49 +1,57 @@
 import { useEffect, useState } from "react";
 
-function DeleteMenuItem() {
-  const [menuItems, setMenuItems] = useState([]);
-
-  async function DeleteItem(id){//async, loadMenuItems and await allows for instant update on menu deletion
-    await fetch("http://localhost:8080/api/reservations/" + id, {// if "" is used, the id paraamter does not convert
-      method: "DELETE"
-    });
-    loadMenuItems();
-  }
-
-    useEffect(() => {
-      loadMenuItems();
-    },[]);
+function CheckReservation() {
+  const [reservation, setReservation] = useState([]);
+  const [email, setEmail] = useState("");
+  const [matches, setMatches] = useState([]);
+  const [searched, setSearched] = useState(false);
   
-  function loadMenuItems(){
-    fetch("http://localhost:8080/api/menu")
-    .then(response => response.json())
-    .then(data => setMenuItems(data));
-  }  
+  useEffect(() => {
 
+        fetch("http://localhost:8080/api/reservations") // retrieves data from menu
+            .then(response => response.json())
+            .then(data => setReservation(data));}, 
+    []);
+
+  function Search(email) {
+    const results = reservation.filter(r => r.email.toLowerCase() === email.toLowerCase());
+
+    setMatches(results);
+    setSearched(true);
+}
   return (
     <div>
-      <h4>Delete Menu Item</h4>
+      <h1>Check Your Reservations</h1>
       
+      <div className="mb-3">
+        <label className="d-flex justify-content-between">Enter your email</label>
+          <input type="text" className="form-control" 
+           value={email}
+           onChange={(e) => setEmail(e.target.value)}/>
+      </div>
+
       <div>
-       {menuItems.map(item => (
-          <div key={item.id}>
-              <p className="d-flex justify-content-between fw-bold">
-                <span>{item.name}</span>
-                <span>
-                  <button className="btn btn-danger"
-                  onClick={() => DeleteItem(item.id)}>
-                    Delete
-                  </button>
-                </span>
-              </p>
-              <p className="d-flex fst-italic mb-3"> 
-                {item.description}
-              </p>
-          </div>
-        ))}
+        <button className="button"
+          onClick={() => Search(email)}>
+            Search
+        </button>
+        
+        {matches.map(r => (
+          <div key={r.id}>
+            <p>Reservation Name: {r.name}</p>
+            <p>Email: {r.email}</p>
+            <p>Date: {r.date}</p>
+            <p>Time: {r.time} pm</p>
+            <p>Party Size: {r.partySize}</p>
+            <hr />
+          </div>))}
+
+      {searched && matches.length === 0 && (
+      <p>No reservations were found.</p>
+      )}
       </div>
     </div>
   );
 }
 
-export default DeleteMenuItem;
+export default CheckReservation;

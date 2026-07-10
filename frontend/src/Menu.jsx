@@ -12,7 +12,7 @@ function Menu() {
   
   return (
     <div>
-      <h1>Lunch Menu</h1>
+      <h1>Menu</h1>
       
       <div>
        {menuItems.map(item => (
@@ -22,6 +22,7 @@ function Menu() {
                 <span>€{item.price}</span>
               </p>
               <p className="d-flex fst-italic mb-3"> {item.description}</p>
+              <hr />
           </div>
         ))}
       </div>
