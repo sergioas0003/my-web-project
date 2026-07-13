@@ -1,6 +1,7 @@
 body { 
   margin: 0;
   min-height: 100vh;
+  padding-top: 80px;
   
   background:
     linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), /*dims image for text legibility*/
@@ -53,13 +54,16 @@ button:active { /*Shrinking button when clicked tells user that thye have select
 }
 
 .navbar{ /*This is the navbar at top of screen*/
-    display: flex;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-    margin: 20px 0;
-    gap: 12px;  
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: rgba(0,0,0,.85);
+
+    z-index: 1000;
 }
 
 .submit-btn {
