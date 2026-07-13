@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LogIn() {
+function LogIn({setLoggedIn}) {
 const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const [message, setMessage] = useState("");
@@ -10,6 +10,7 @@ function Submit(){
   if(username == "a" && password == "b"){
       setMessage("Login successful!");
       setMsgColor("green");
+      setLoggedIn(true);
   }else{
     setMessage("Incorrect username or passsword.");
     setMsgColor("red");

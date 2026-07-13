@@ -10,6 +10,8 @@ import CheckReservation from './CheckReservation';
 
 function App() {
    const [page, setPage] = useState("home");//Sets current page to menu 
+   const [loggedIn, setLoggedIn] = useState(false);
+
     return (   
     
     <div className="clear-container">
@@ -41,22 +43,25 @@ function App() {
             onClick={() => setPage("login")}>
                 Login
             </button>
+            
+            {loggedIn && (
+            <>
+                <button className="admin-btn"
+                onClick={() => setPage("add menu item")}>
+                    Add Menu Item
+                </button>
 
-            <button className="admin-btn"
-            onClick={() => setPage("add menu item")}>
-                Add Menu Item
-            </button>
+                <button className="admin-btn"
+                onClick={() => setPage("delete menu item")}>
+                    Delete Menu Item
+                </button>
 
-            <button className="admin-btn"
-            onClick={() => setPage("delete menu item")}>
-                Delete Menu Item
-            </button>
-
-             <button className="admin-btn"
-            onClick={() => setPage("add menu item")}>
-                Edit Reservation
-            </button>
-
+                <button className="admin-btn"
+                onClick={() => setPage("add menu item")}>
+                    Edit Reservation
+                </button>
+            </>
+            )}
         </div>
 
       <div className="app-container">
@@ -66,7 +71,7 @@ function App() {
         {page === "reservations" && <Reservations />}
         {page === "add menu item" && <AddMenuItem />}
         {page === "delete menu item" && <DeleteMenuItem />}
-        {page === "login" && <Login />}
+        {page === "login" && <Login setLoggedIn={setLoggedIn} />}
         {page === "check reservation" && <CheckReservation />}
 
         </div>   
