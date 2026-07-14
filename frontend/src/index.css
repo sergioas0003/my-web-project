@@ -54,16 +54,11 @@ button:active { /*Shrinking button when clicked tells user that thye have select
 }
 
 .navbar{ /*This is the navbar at top of screen*/
-  
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-
     background-color: rgba(0,0,0,.85);
-
-    z-index: 1000;
 }
 
 .submit-btn {

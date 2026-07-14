@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 
-function DeleteMenuItem() {
-  const [menuItems, setMenuItems] = useState([]);
+function EditReservation() {
+  const [reservation, setReservation] = useState([]);
 
-  async function DeleteItem(id){//async, loadMenuItems and await allows for instant update on menu deletion
-    await fetch("http://localhost:8080/api/menu/" + id, {// if "" is used, the id paraamter does not convert
+  async function DeleteItem(id){//async, loadReservations and await allows for instant update on rseervation deletion
+    await fetch("http://localhost:8080/api/reservations/" + id, {// if "" is used, the id paraamter does not convert
       method: "DELETE"
     });
-    loadMenuItems();
+    loadReservations();
   }
 
     useEffect(() => {
-      loadMenuItems();
+      loadReservations();
     },[]);
   
-  function loadMenuItems(){
-    fetch("http://localhost:8080/api/menu")
+  function loadReservations(){
+    fetch("http://localhost:8080/api/reservations")
     .then(response => response.json())
-    .then(data => setMenuItems(data));
+    .then(data => setReservation(data));
   }  
 
   return (
     <div>
-      <h4>Delete Menu Item</h4>
+      <h1>Delete Reservation</h1>
       
       <div>
-       {menuItems.map(item => (
+       {reservation.map(item => (
           <div key={item.id}>
-              <p className="d-flex justify-content-between fw-bold">
-                <span>{item.name}</span>
+              <p className="d-flex justify-content-between align-items-center mb-3">
+                <span>{"Email: " + item.email}</span>
                 <span>
                   <button className="btn btn-danger"
                   onClick={() => DeleteItem(item.id)}>
@@ -37,8 +37,18 @@ function DeleteMenuItem() {
                 </span>
               </p>
               <p className="d-flex fst-italic mb-3"> 
-                {item.description}
+                {"Reservation name: " + item.name}
               </p>
+              <p className="d-flex fst-italic mb-3"> 
+                {"Date: " + item.date}
+              </p>
+              <p className="d-flex fst-italic mb-3"> 
+                {"Time: " + item.time}
+              </p>
+              <p className="d-flex fst-italic mb-3"> 
+                {"Party Size: " + item.partySize}
+              </p>
+              <hr />
           </div>
         ))}
       </div>
@@ -46,4 +56,4 @@ function DeleteMenuItem() {
   );
 }
 
-export default DeleteMenuItem;
+export default EditReservation;
