@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-.form-control {/*This is bars for user input text*/
+.form-control {/*This is the bars for user input text*/
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -36,7 +36,7 @@ button:hover {
   transform: scale(1.05);
   transform: translateY(-3px);
 }
-button:active { /*Shrinking button when clicked tells user that thye have selected button*/
+button:active { /*Shrinking button when clicked tells user that they have selected button*/
   transform: scale(0.98);
 }
 

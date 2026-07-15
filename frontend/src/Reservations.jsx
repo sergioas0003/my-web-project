@@ -7,29 +7,37 @@ const [partySize, setPartySize] = useState("");
 const [date, setDate] = useState("");
 const [time, setTime] = useState("");
 const [message, setMessage] = useState("");
+const [msgColour, setMsgColour] = useState("");
 
   function AddReservation(){
-    setMessage(name + ", your reservation for " + partySize + " has been successfully booked at " + time + "pm on " + date);
-    fetch("http://localhost:8080/api/reservations", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            date: date,
-            partySize: partySize,
-            time: time
-        })
-    });
+    if(name === "" || email === "" || partySize === "" || date === "" || time === ""){
+      setMsgColour("red");
+      setMessage("Please fill in all fields");
+    }else{
+      setMessage(name + ", your reservation for " + partySize + " has been successfully booked at " + time + "pm on " + date);
+      setMsgColour("green");
+      
+      fetch("http://localhost:8080/api/reservations", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              name: name,
+              email: email,
+              date: date,
+              partySize: partySize,
+              time: time
+          })
+      });
+    }
   }
 
   return (
     <div>
       <h1>Make a Reservation</h1>
       
-      <p style={{ color: "green" }}>
+      <p style={{ color: msgColour }}>
         {message}
       </p>
 
