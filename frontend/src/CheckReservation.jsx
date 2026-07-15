@@ -5,6 +5,7 @@ function CheckReservation() {
   const [email, setEmail] = useState("");
   const [matches, setMatches] = useState([]);
   const [searched, setSearched] = useState(false);
+  const [message, setMessage] = useState("");
   
   useEffect(() => {
         loadReservations();
@@ -39,10 +40,17 @@ function CheckReservation() {
 
     setMatches(results);
     setSearched(true);
+    if(searched && matches.length === 0) {
+      setMessage("No reservations were found.");
+    }else{
+      setMessage("");
+    }
 }
   return (
     <div>
       <h1>Check Your Reservations</h1>
+
+      <p>{message}</p>
       
       <div className="mb-3">
         <label className="d-flex justify-content-between">Enter your email</label>
@@ -73,9 +81,6 @@ function CheckReservation() {
             <hr />
           </div>))}
 
-      {searched && matches.length === 0 && (
-      <p>No reservations were found.</p>
-      )}
       </div>
     </div>
   );
