@@ -53,8 +53,24 @@ button:active { /*Shrinking button when clicked tells user that thye have select
     transform: scale(0.98);
 }
 
+.nav-btn {
+  transition: 0.3s; 
+  background-color: rgba(0,0,0,.85); 
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4); 
+}
+.nav-btn:hover {
+    background-color: #415b76;
+    transform: scale(1.05);
+    transform: translateY(-3px);
+}
+.nav-btn:active {
+    transform: scale(0.98);
+}
+
 .navbar{ /*This is the navbar at top of screen*/
     position: fixed;
+    display: flex; 
+    flex-wrap: wrap;
     top: 0;
     left: 0;
     width: 100%;

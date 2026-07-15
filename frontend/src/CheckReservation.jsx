@@ -52,7 +52,7 @@ function CheckReservation() {
       </div>
 
       <div>
-        <button className="button"
+        <button className="submit-btn mt-3"
           onClick={() => Search(email)}>
             Search
         </button>

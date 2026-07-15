@@ -19,28 +19,28 @@ function App() {
         <div className="navbar">{/* This creates the navbar */}
             
             <button 
-            className="button" //Color of button blue
+            className="nav-btn" //Color of button blue
             onClick={() => setPage("menu")}//Sets the current page to menu
             >
                 Menu {/* Button text */}
             </button>
             
-            <button className="button"
+            <button className="nav-btn"
             onClick={() => setPage("home")}>
                 Home
             </button>
            
-            <button className="button"
+            <button className="nav-btn"
             onClick={() => setPage("reservations")}>
                 Make a Reservation
             </button>
 
-            <button className="button"
+            <button className="nav-btn"
             onClick={() => setPage("check reservation")}>
                 Check Reservation
             </button>
 
-            <button className="button"
+            <button className="nav-btn"
             onClick={() => setPage("login")}>
                 Login
             </button>
@@ -80,6 +80,7 @@ function App() {
         <footer className="footer">
         <p2>© Papa's Pizzas</p2><br />
         <p2>084 564 49 03</p2><br />
+        <p2>21, Downing Alley, London</p2><br />
         <p2>Photo by Ivan Torres on Uplash </p2>
         </footer>
     </div>

@@ -30,7 +30,7 @@ function EditReservation() {
               <p className="d-flex justify-content-between align-items-center mb-3">
                 <span>{"Email: " + item.email}</span>
                 <span>
-                  <button className="btn btn-danger"
+                  <button className="button"
                   onClick={() => DeleteItem(item.id)}>
                     Delete
                   </button>
