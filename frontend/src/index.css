@@ -117,3 +117,9 @@ p {/*This is for paragraph text*/
   font-family: 'Poppins';
   font-size: 21px;
 }
+
+p2 {/*This is for smaller paragraph text*/
+  margin: 0;
+  font-family: 'Poppins';
+  font-size: 15px;
+}

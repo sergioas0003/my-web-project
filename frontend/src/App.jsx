@@ -77,7 +77,11 @@ function App() {
         {page === "edit menu item" && <EditReservation />}
 
         </div>   
-        
+        <footer className="footer">
+        <p2>© Papa's Pizzas</p2><br />
+        <p2>084 564 49 03</p2>
+        <p2>Photo by Ivan Torres on Uplash </p2><br />
+        </footer>
     </div>
 
   );
